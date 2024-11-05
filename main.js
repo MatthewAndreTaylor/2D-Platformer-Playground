@@ -190,7 +190,7 @@ $(function(){
     function keyDown(e) {
         if (e.keyCode == 65)
           leftKey = true;
-        if (e.keyCode == 87)
+        if (e.keyCode == 87 || e.keyCode == 32)
           upKey = true;
         if (e.keyCode == 68)
           rightKey = true;
@@ -200,7 +200,7 @@ $(function(){
         if (e.keyCode == 65) {
           leftKey = false;
         }
-        if (e.keyCode == 87) {
+        if (e.keyCode == 87 || e.keyCode == 32) {
           upKey = false;
         }
         if (e.keyCode == 68) {
@@ -215,5 +215,8 @@ $(function(){
     $("#canvas").mouseout(function(e){handleMouseOut(e)});
     document.addEventListener('keydown', function(e) {keyDown(e)})
     document.addEventListener('keyup', function(e) {keyUp(e)})
-    $("#play").click(function(){isPlaying = !isPlaying})
+    $("#play").mousedown(function(e){
+        isPlaying = !isPlaying;
+        $("#play").text(isPlaying ? "Pause" : "Play");
+    })
 });

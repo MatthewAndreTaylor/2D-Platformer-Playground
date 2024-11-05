@@ -1,6 +1,13 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="author" content="Matthew Taylor">
+<meta name="description" content="2D Platformer playground">
+<title>2D Platformer playground</title>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 <script src="main.js"></script>
 <style>
@@ -9,13 +16,15 @@
     #game{margin: auto;width: 50%;padding: 10px;}
 </style>
 
-<script></script>
 </head>
 <body>
     <div id="game">
         <h1>2D Platformer playground</h1>
+        <p>Use the WASD keys to move the player around the screen.</p>
+        <p>You can modify the stage while paused. Tool for designing small platformer levels.</p>
+
         <canvas id="canvas" width="800" height="600"></canvas>
-        <button id="play">Play</button>
+        <button id="play">Pause</button>
         <ul class="rect-list"></ul>
     </div>
 </body>
